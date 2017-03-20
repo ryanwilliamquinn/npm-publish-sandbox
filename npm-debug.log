@@ -1,0 +1,29 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'version',
+1 verbose cli   'from-git' ]
+2 info using npm@3.10.10
+3 info using node@v6.9.5
+4 info git [ 'status', '--porcelain' ]
+5 info git [ 'describe', '--abbrev=0' ]
+6 verbose stack Error: Version not changed
+6 verbose stack     at persistVersion (/usr/local/lib/node_modules/npm/lib/version.js:92:47)
+6 verbose stack     at /usr/local/lib/node_modules/npm/lib/version.js:64:5
+6 verbose stack     at LOOP (/usr/local/lib/node_modules/npm/node_modules/slide/lib/chain.js:7:26)
+6 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/slide/lib/chain.js:18:7
+6 verbose stack     at /usr/local/lib/node_modules/npm/lib/version.js:82:5
+6 verbose stack     at /usr/local/lib/node_modules/npm/lib/utils/no-progress-while-running.js:21:8
+6 verbose stack     at ChildProcess.exithandler (child_process.js:197:7)
+6 verbose stack     at emitTwo (events.js:106:13)
+6 verbose stack     at ChildProcess.emit (events.js:191:7)
+6 verbose stack     at maybeClose (internal/child_process.js:877:16)
+7 verbose cwd /Users/rquinn/repos/npm-publish-sandbox
+8 error Darwin 16.4.0
+9 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "version" "from-git"
+10 error node v6.9.5
+11 error npm  v3.10.10
+12 error Version not changed
+13 error If you need help, you may report this error at:
+13 error     <https://github.com/npm/npm/issues>
+14 verbose exit [ 1, true ]
