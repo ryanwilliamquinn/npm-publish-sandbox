@@ -1,0 +1,16 @@
+{
+  "name": "npm-publish-sandbox",
+  "version": "0.0.1",
+  "description": "",
+  "homepage": "https://www.github.com/ryanwilliamquinn/npm-publish-sandbox",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ryanwilliamquinn/npm-publish-sandbox.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
