@@ -29,11 +29,11 @@ if (env.BRANCH_NAME == "master") {
 
         node {
             stage('Deploy') {
-                git config --global user.email "jenkins@mydomain.com"
-                git config --global user.name "jenkins"
+                inBuildAgent 'git config --global user.email "jenkins@mydomain.com"'
+                inBuildAgent 'git config --global user.name "jenkins"'
                 inBuildAgent 'npm version patch; npm publish'
-                git push origin master
-                git push origin --tags
+                inBuildAgent 'git push origin master'
+                inBuildAgent 'git push origin --tags'
             }
         }
     } catch (org.jenkinsci.plugins.workflow.steps.FlowInterruptedException fe) {
