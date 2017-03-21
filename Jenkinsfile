@@ -13,7 +13,8 @@ node {
 
 }
 
-if (env.BRANCH_NAME == MASTER) {
+echo env.BRANCH_NAME
+if (env.BRANCH_NAME == "master") {
     try {
         def userInput = input(
             id: 'semverTypeInput',
