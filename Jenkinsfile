@@ -23,10 +23,12 @@ if (env.BRANCH_NAME == "master") {
             parameters: [choice(choices: "patch\nminor\nmajor", description: 'semver types', name: 'semverType')],
             submitterParameter: 'versionType')
 
-        stage('Deploy') {
-            inBuildAgent 'npm version ${userInput['semverType']]}; npm publish'
-            git push origin master
-            git push origin --tags
+        node {
+            stage('Deploy') {
+                inBuildAgent 'npm version ${userInput['semverType']]}; npm publish'
+                git push origin master
+                git push origin --tags
+            }
         }
     } catch (org.jenkinsci.plugins.workflow.steps.FlowInterruptedException fe) {
         echo("aborted")
