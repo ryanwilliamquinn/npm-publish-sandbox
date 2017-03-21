@@ -29,7 +29,7 @@ if (env.BRANCH_NAME == "master") {
 
         node {
             stage('Deploy') {
-                inBuildAgent 'npm version ${userInput['semverType']}; npm publish'
+                inBuildAgent 'npm version patch; npm publish'
                 git push origin master
                 git push origin --tags
             }
