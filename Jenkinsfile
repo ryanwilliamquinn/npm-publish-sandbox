@@ -13,15 +13,19 @@ node {
 
 }
 
+
 echo env.BRANCH_NAME
 if (env.BRANCH_NAME == "master") {
+    
     try {
+        stage('User Input') {
         def userInput = input(
             id: 'semverTypeInput',
             message: 'Shall we publish?',
             ok: 'Yes go do it',
             parameters: [choice(choices: "patch\nminor\nmajor", description: 'semver types', name: 'semverType')],
             submitterParameter: 'versionType')
+        }
 
         node {
             stage('Deploy') {
@@ -35,7 +39,6 @@ if (env.BRANCH_NAME == "master") {
     } catch (error) {
         throw error
     }
-
 }
 
 def inBuildAgent(command) {
