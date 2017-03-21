@@ -29,6 +29,7 @@ if (env.BRANCH_NAME == "master") {
 
         node {
             stage('Deploy') {
+                inBuildAgent 'git remote -v'
                 inBuildAgent 'git config --global user.email "jenkins@mydomain.com"'
                 inBuildAgent 'git config --global user.name "jenkins"'
                 inBuildAgent 'npm version patch; npm publish'
