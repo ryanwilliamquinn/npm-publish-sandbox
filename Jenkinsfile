@@ -36,5 +36,5 @@ if (env.BRANCH_NAME == MASTER) {
 }
 
 def inBuildAgent(command) {
-    sh "docker run ${shellCommand}"
+    sh command
 }
