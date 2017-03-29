@@ -9,6 +9,7 @@
   },
   "main": "index.js",
   "scripts": {
+    "preversion": "echo in preversion",
     "test": "NODE_ENV=test mocha test/**/*.test.js",
     "build": "echo 'OK'"
   },
@@ -16,5 +17,8 @@
   "license": "ISC",
   "devDependencies": {
     "mocha": "^3.2.0"
+  },
+  "dependencies": {
+    "handlebars": "^3.0.3"
   }
 }
